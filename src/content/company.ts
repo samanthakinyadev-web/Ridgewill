@@ -22,7 +22,7 @@ export const company = {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/company/ridgewillglobal',
+      url: 'https://www.linkedin.com/in/wilson-gatehi-maina-338a6039a/',
       icon: 'logo-linkedin',
     },
     {

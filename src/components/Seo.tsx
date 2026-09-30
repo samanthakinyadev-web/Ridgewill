@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { siteConfig } from '../content/company';
+import { siteConfig, company } from '../content/company';
 
 interface SeoProps {
   title?: string;
@@ -45,9 +45,7 @@ export function Seo({ title, description, image, children }: SeoProps) {
             email: 'ridgewillglobal@gmail.com',
             availableLanguage: ['en', 'sw', 'fr'],
           },
-          sameAs: [
-            'https://wa.me/254721148009',
-          ],
+          sameAs: company.socialLinks.map((link) => link.url),
         })}
       </script>
 

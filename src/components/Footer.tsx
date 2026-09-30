@@ -1,5 +1,6 @@
 import { company } from '../content/company';
 import { Link } from 'react-router-dom';
+import { SocialIcon } from './SocialIcon';
 
 const YEAR = new Date().getFullYear();
 
@@ -74,7 +75,7 @@ export function Footer() {
                       aria-label={link.name}
                       className="footer__social-link"
                     >
-                      {link.icon || link.name}
+                      <SocialIcon name={link.name} size={20} />
                     </a>
                   </li>
                 ))}
