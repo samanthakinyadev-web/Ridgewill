@@ -1,0 +1,210 @@
+/* ===== Design Tokens ===== */
+
+:root {
+  /* Brand Palette */
+  --color-brown: #5a2e0e;
+  --color-brown-dark: #44230a;
+  --color-gold: #b88918;
+  --color-gold-dark: #8f6b11;
+  --color-green: #5e8c31;
+  --color-green-dark: #4a7326;
+  --color-forest-green: #2f5d3a;
+  --color-terracotta: #d2691e;
+  --color-terracotta-dark: #a0522d;
+  --color-cream: #fff8e7;
+  --color-cream-subtle: #ffefd0;
+  --color-card: #ffffff;
+  --color-text: #332a23;
+  --color-text-muted: #5a4c40;
+
+  /* Text on images/overlays (always light for contrast) */
+  --color-text-on-image: #ffffff;
+  --color-text-on-image-secondary: #f0e6d2;
+  --color-text-on-image-muted: #d4c2a8;
+
+  /* Aliases (backward compatibility) */
+  --color-primary: var(--color-brown);
+  --color-primary-dark: var(--color-brown-dark);
+  --color-accent: var(--color-gold);
+  --color-accent-dark: var(--color-gold-dark);
+  --color-bg: var(--color-cream);
+  --color-bg-subtle: var(--color-cream-subtle);
+  --color-accent-green: var(--color-green);
+  --color-forest: var(--color-forest-green);
+  --color-secondary: var(--color-terracotta);
+
+   /* Dark mode base */
+   --color-bg-dark: #2b1a0f;
+   --color-bg-subtle-dark: #3b2a1a;
+   --color-card-dark: #3b2a1a;
+
+   /* Hero overlay */
+   --hero-overlay: rgba(255, 248, 231, 0.85);
+
+  /* Header-specific colors */
+  --color-topbar-bg: #5c2e0e;
+  --color-topbar-text: var(--color-cream);
+  --color-nav-bg: var(--color-cream);
+  --color-button-gold: #b8860b;
+}
+
+/* ===== Dark mode ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brown: #7a3e14;
+    --color-brown-dark: #5a2e0e;
+    --color-gold: #d4a31c;
+    --color-gold-dark: #b88918;
+    --color-green: #6faf3d;
+    --color-green-dark: #5a962d;
+    --color-forest-green: #3a7a4a;
+    --color-terracotta: #e07b2c;
+    --color-terracotta-dark: #c96b23;
+    --color-cream: #2b1a0f;
+    --color-cream-subtle: #3b2a1a;
+    --color-card: #2b1a0f;
+    --color-text: #fff8e7;
+    --color-text-muted: #d4c2a8;
+
+     /* Aliases */
+     --color-primary: var(--color-brown);
+     --color-accent: var(--color-gold);
+     --color-bg: var(--color-cream);
+     --color-bg-subtle: var(--color-cream-subtle);
+
+     /* Hero overlay */
+     --hero-overlay: rgba(43, 26, 15, 0.85);
+
+     /* Header-specific colors */
+     --color-topbar-bg: #44230a;
+     --color-topbar-text: #fff8e7;
+     --color-nav-bg: var(--color-bg-dark);
+     --color-button-gold: #d4a31c;
+   }
+}
+
+[data-theme='dark'] {
+  --color-brown: #7a3e14;
+  --color-brown-dark: #5a2e0e;
+  --color-gold: #d4a31c;
+  --color-gold-dark: #b88918;
+  --color-green: #6faf3d;
+  --color-forest-green: #3a7a4a;
+  --color-terracotta: #e07b2c;
+  --color-cream: #2b1a0f;
+  --color-cream-subtle: #3b2a1a;
+  --color-card: #2b1a0f;
+  --color-text: #fff8e7;
+  --color-text-muted: #d4c2a8;
+
+  /* Aliases */
+  --color-primary: var(--color-brown);
+  --color-accent: var(--color-gold);
+  --color-bg: var(--color-cream);
+  --color-bg-subtle: var(--color-cream-subtle);
+
+  /* Hero overlay */
+  --hero-overlay: rgba(43, 26, 15, 0.85);
+
+  /* Header-specific colors */
+  --color-topbar-bg: #44230a;
+  --color-topbar-text: #fff8e7;
+  --color-nav-bg: var(--color-bg-dark);
+  --color-button-gold: #d4a31c;
+}
+
+/* ===== Typography ===== */
+:root {
+  --font-sans: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  --font-heading: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.75;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/* ===== Spacing ===== */
+:root {
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+}
+
+/* ===== Layout ===== */
+:root {
+  --max-width-container: 1200px;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --transition: 0.2s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+}
+
+/* ===== Semantic helpers ===== */
+.text-primary {
+  color: var(--color-primary);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.text-green {
+  color: var(--color-green);
+}
+.text-terracotta {
+  color: var(--color-terracotta);
+}
+.text-white {
+  color: var(--color-card);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.bg-green {
+  background-color: var(--color-green);
+}
+.bg-terracotta {
+  background-color: var(--color-terracotta);
+}
+.bg-cream {
+  background-color: var(--color-bg);
+}
+.bg-forest {
+  background-color: var(--color-forest-green);
+}
