@@ -5,7 +5,9 @@ interface PortfolioCardProps {
 }
 
 export function PortfolioCard({ project }: PortfolioCardProps) {
-  const imageSrc = project.image ? `/portfolio/${project.image}` : null;
+  // `image` already holds a complete public path such as
+  // /assests/AIRFREIGHT.jpeg, so it is used as-is rather than prefixed.
+  const imageSrc = project.image || null;
 
   return (
     <div className="portfolio-card card">
@@ -27,9 +29,6 @@ export function PortfolioCard({ project }: PortfolioCardProps) {
       </div>
       <div className="portfolio-card__content">
         <span className="portfolio-card__category">{project.category}</span>
-        {project.route && (
-          <span className="portfolio-card__route">{project.route}</span>
-        )}
         <h3 className="portfolio-card__title">{project.title}</h3>
         <p className="portfolio-card__description">{project.description}</p>
       </div>

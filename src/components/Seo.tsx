@@ -53,3 +53,15 @@ export function Seo({ title, description, image, children }: SeoProps) {
     </Helmet>
   );
 }
+
+/**
+ * Keeps admin pages out of search results. Rendered on its own rather than as
+ * a Seo prop so it can be dropped anywhere without a title.
+ */
+export function NoIndex() {
+  return (
+    <Helmet>
+      <meta name="robots" content="noindex, nofollow" />
+    </Helmet>
+  );
+}

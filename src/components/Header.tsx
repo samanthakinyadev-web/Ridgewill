@@ -181,6 +181,15 @@ export function Header() {
             >
               Portfolio
             </NavLink>
+
+            <NavLink
+              to="/track"
+              className={({ isActive }) =>
+                `header__nav-link${isActive ? ' router-active' : ''}`
+              }
+            >
+              Track
+            </NavLink>
           </div>
 
           <Link to="/contact" className="btn btn-gold header__contact-btn">

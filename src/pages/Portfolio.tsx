@@ -93,7 +93,7 @@ export function PortfolioPage() {
             </button>
             {selectedImage.image && (
               <img
-                src={`/portfolio/${selectedImage.image}`}
+                src={selectedImage.image}
                 alt={selectedImage.title}
                 className="lightbox__img"
               />

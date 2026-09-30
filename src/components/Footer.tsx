@@ -88,6 +88,12 @@ export function Footer() {
           <p className="footer__copyright">
             &copy; {YEAR} {company.name}. All rights reserved.
           </p>
+          <p className="footer__privacy">
+            Shipment tracking stores your name, email and phone number only to send
+            you updates about your own consignment. Tracking pages never display
+            your contact details. We keep your data in line with Kenya's Data
+            Protection Act, 2019.
+          </p>
         </div>
       </div>
     </footer>
