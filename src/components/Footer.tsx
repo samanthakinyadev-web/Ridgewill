@@ -1,11 +1,36 @@
+import { useRef } from 'react';
 import { company } from '../content/company';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { SocialIcon } from './SocialIcon';
 
 const YEAR = new Date().getFullYear();
 
+/** Taps needed, and the window they must fall inside. */
+const SECRET_TAP_COUNT = 5;
+const SECRET_TAP_WINDOW_MS = 3000;
+
 export function Footer() {
+  const navigate = useNavigate();
   const socialLinks = company.socialLinks || [];
+  // Held in a ref so that ordinary taps never trigger a re-render.
+  const tapTimes = useRef<number[]>([]);
+
+  /**
+   * Undisclosed route to the staff area for people who already work here.
+   * Not a security boundary: Row Level Security is what actually protects
+   * shipment data, and this only avoids advertising the panel.
+   */
+  const handleSymbolTap = () => {
+    const now = Date.now();
+    const recent = tapTimes.current.filter((t) => now - t <= SECRET_TAP_WINDOW_MS);
+    recent.push(now);
+    tapTimes.current = recent;
+
+    if (recent.length >= SECRET_TAP_COUNT) {
+      tapTimes.current = [];
+      navigate('/admin');
+    }
+  };
 
   return (
     <footer className="footer" role="contentinfo">
@@ -86,7 +111,10 @@ export function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            &copy; {YEAR} {company.name}. All rights reserved.
+            <span className="footer__copyright-symbol" onClick={handleSymbolTap}>
+              &copy;
+            </span>{' '}
+            {YEAR} {company.name}. All rights reserved.
           </p>
           <p className="footer__privacy">
             Shipment tracking stores your name, email and phone number only to send

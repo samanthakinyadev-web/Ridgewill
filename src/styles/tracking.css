@@ -866,6 +866,17 @@
   }
 }
 
+/* ===== Footer copyright symbol (undisclosed admin trigger) ===== */
+
+/* No hover state and no cursor change: this must not read as interactive. */
+.footer__copyright-symbol {
+  /* Kill the 300ms double-tap delay so rapid taps register on touch devices. */
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ===== Footer privacy note ===== */
 
 .footer__privacy {
