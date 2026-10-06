@@ -17,6 +17,8 @@ export function PortfolioCard({ project }: PortfolioCardProps) {
             src={imageSrc}
             alt={project.title}
             className="portfolio-card__image"
+            width="1536"
+            height="1024"
             loading="lazy"
           />
         ) : (

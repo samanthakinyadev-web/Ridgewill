@@ -17,6 +17,9 @@ export function ContactPage() {
       />
       <section className="contact-page__hero" aria-labelledby="contact-title">
         <div className="container">
+          <p className="section-eyebrow" style={{ justifyContent: 'center' }}>
+            Get in touch
+          </p>
           <h1 id="contact-title">Contact Us</h1>
           <p className="contact-page__subtitle">
             Whether you need a quote or have a general inquiry, we're here to help.

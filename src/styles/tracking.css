@@ -22,8 +22,8 @@
 }
 
 .status-badge--progress {
-  color: var(--color-gold-dark);
-  background-color: rgba(184, 137, 24, 0.14);
+  color: #7a5a00;
+  background-color: rgba(122, 90, 0, 0.1);
 }
 
 .status-badge--success {
@@ -33,7 +33,7 @@
 
 .status-badge--warning {
   color: #8a4b00;
-  background-color: rgba(209, 105, 30, 0.18);
+  background-color: rgba(138, 75, 0, 0.12);
 }
 
 .status-badge--danger {
@@ -96,7 +96,7 @@
 
 .stage-progress__step.is-current .stage-progress__marker {
   border-color: var(--color-gold);
-  box-shadow: 0 0 0 4px rgba(184, 137, 24, 0.28);
+    box-shadow: 0 0 0 4px rgba(166, 124, 0, 0.28);
   background-color: var(--color-gold);
 }
 
@@ -109,7 +109,7 @@
   margin: var(--spacing-4) 0 0;
   padding: var(--spacing-3);
   border-left: 4px solid var(--color-terracotta);
-  background-color: rgba(209, 105, 30, 0.12);
+  background-color: rgba(138, 75, 0, 0.1);
   border-radius: var(--border-radius);
   font-size: var(--font-size-sm);
 }
@@ -125,7 +125,7 @@
 .timeline__item {
   position: relative;
   padding: 0 0 var(--spacing-5) var(--spacing-7);
-  border-left: 2px solid var(--color-border, rgba(90, 46, 14, 0.18));
+  border-left: 2px solid var(--color-border, rgba(59, 36, 18, 0.18));
   margin-left: 6px;
 }
 
@@ -178,14 +178,15 @@
 /* ===== Public tracking page ===== */
 
 .track-page__hero {
-  background-color: var(--color-brown);
-  color: var(--color-cream);
+  background-color: var(--offwhite);
+  border-bottom: 1px solid var(--line);
+  color: var(--brown-900);
   padding: var(--spacing-16) 0;
   text-align: center;
 }
 
 .track-page__title {
-  color: var(--color-cream);
+  color: var(--brown-900);
   font-size: var(--font-size-4xl);
   margin: 0 0 var(--spacing-3);
 }
@@ -193,7 +194,7 @@
 .track-page__subtitle {
   margin: 0 auto;
   max-width: 42rem;
-  opacity: 0.9;
+  color: var(--brown-600);
   line-height: var(--line-height-normal);
 }
 
@@ -236,7 +237,7 @@
 }
 
 .track-form__input:focus-visible {
-  outline: 3px solid rgba(184, 137, 24, 0.5);
+  outline: 3px solid rgba(166, 124, 0, 0.45);
   outline-offset: 1px;
 }
 
@@ -259,7 +260,7 @@
   max-width: 40rem;
   margin: 0 auto;
   padding: var(--spacing-6);
-  border: 1px solid var(--color-border, rgba(90, 46, 14, 0.18));
+  border: 1px solid var(--color-border, rgba(59, 36, 18, 0.18));
   border-radius: var(--border-radius-lg);
   background-color: var(--color-bg-subtle);
   text-align: center;
@@ -300,7 +301,7 @@
   justify-content: space-between;
   gap: var(--spacing-3);
   padding-bottom: var(--spacing-4);
-  border-bottom: 1px solid var(--color-border, rgba(90, 46, 14, 0.18));
+  border-bottom: 1px solid var(--color-border, rgba(59, 36, 18, 0.18));
 }
 
 .track-result__label {
@@ -351,7 +352,7 @@
   gap: var(--spacing-3);
   margin-top: var(--spacing-8);
   padding-top: var(--spacing-5);
-  border-top: 1px solid var(--color-border, rgba(90, 46, 14, 0.18));
+  border-top: 1px solid var(--color-border, rgba(59, 36, 18, 0.18));
 }
 
 /* ===== Admin shell ===== */
@@ -468,7 +469,7 @@
 }
 
 .admin-fieldset {
-  border: 1px solid var(--color-border, rgba(90, 46, 14, 0.18));
+  border: 1px solid var(--color-border, rgba(59, 36, 18, 0.18));
   border-radius: var(--border-radius);
   padding: var(--spacing-5);
   margin: 0 0 var(--spacing-5);
@@ -519,7 +520,7 @@
 }
 
 .admin-input:focus-visible {
-  outline: 3px solid rgba(184, 137, 24, 0.5);
+  outline: 3px solid rgba(166, 124, 0, 0.45);
   outline-offset: 1px;
 }
 
@@ -561,7 +562,7 @@
 
 .btn-danger {
   background-color: #a32218;
-  color: #fff8e7;
+  color: #ffffff;
   border: 1px solid #a32218;
 }
 
@@ -583,7 +584,7 @@
   align-items: flex-end;
   gap: var(--spacing-4);
   padding: var(--spacing-4);
-  border: 1px solid var(--color-border, rgba(90, 46, 14, 0.18));
+  border: 1px solid var(--color-border, rgba(59, 36, 18, 0.18));
   border-radius: var(--border-radius);
   margin-bottom: var(--spacing-5);
 }
@@ -594,7 +595,7 @@
 
 .admin-table-wrap {
   overflow-x: auto;
-  border: 1px solid var(--color-border, rgba(90, 46, 14, 0.18));
+  border: 1px solid var(--color-border, rgba(59, 36, 18, 0.18));
   border-radius: var(--border-radius);
 }
 
@@ -608,7 +609,7 @@
 .admin-table td {
   text-align: left;
   padding: var(--spacing-3);
-  border-bottom: 1px solid var(--color-border, rgba(90, 46, 14, 0.12));
+  border-bottom: 1px solid var(--color-border, rgba(59, 36, 18, 0.12));
   white-space: nowrap;
 }
 
@@ -693,7 +694,7 @@
 
 .admin-event {
   padding: var(--spacing-4) 0;
-  border-bottom: 1px solid var(--color-border, rgba(90, 46, 14, 0.12));
+  border-bottom: 1px solid var(--color-border, rgba(59, 36, 18, 0.12));
 }
 
 .admin-event:last-child {
@@ -718,7 +719,7 @@
 }
 
 .admin-tag--internal {
-  background-color: rgba(90, 46, 14, 0.12);
+  background-color: rgba(59, 36, 18, 0.12);
   color: var(--color-brown);
 }
 

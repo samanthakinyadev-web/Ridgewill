@@ -19,6 +19,9 @@ export function PortfolioPage() {
       <Seo title="Portfolio" description="Our completed projects across air, sea, and specialized logistics." />
       <section className="portfolio-page__intro" aria-labelledby="portfolio-title">
         <div className="container">
+          <p className="section-eyebrow" style={{ justifyContent: 'center' }}>
+            Our work
+          </p>
           <h1 id="portfolio-title">Our Portfolio</h1>
           <p className="portfolio-page__subtitle">
             A selection of projects showcasing our global logistics solutions across
